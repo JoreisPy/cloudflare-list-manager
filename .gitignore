@@ -1,0 +1,8 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore the virtual environment directory
+venv/
+
+# Ignore the credentials file
+credentials.cfg
