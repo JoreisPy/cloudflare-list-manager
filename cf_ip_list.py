@@ -21,7 +21,6 @@ headers = {
   'X-Auth-Email': cf_email,
   'X-Auth-Key':   cf_api_key,
   'Content-Type': 'application/json',
-  'Authorization': 'Bearer fUXfrHGMC7soO69pcIWWjX41PgADNvdPU9crYA3I',
   'Cookie': '__cflb=0H28vgHxwvgAQtjUGU56Rb8iNWZVUvXhincQSARpxUu; __cfruid=371a7e0b3c2684cefeb9b3eb20c1559c5e3e9fa1-1676797492'
 }
 
