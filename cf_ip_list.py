@@ -2,10 +2,14 @@ import argparse
 import configparser
 import json
 import requests
+import os
+
+# Get the path of the current script
+script_path = os.path.dirname(os.path.abspath(__file__))
 
 # Read the Cloudflare account information from the config file
 config = configparser.ConfigParser()
-config.read('credentials.cfg')
+config.read(f'/{script_path}/credentials.cfg')
 cf_email = config.get('cloudflare', 'email')
 cf_api_key = config.get('cloudflare', 'api_key')
 account_id = config.get('cloudflare', 'account_id')
