@@ -51,8 +51,6 @@ def get_list(list_id):
     except requests.exceptions.RequestException as e:
         print(f'Error getting contents of {list_id}: {e}')
 
-
-
 # Define a function to add an IP or subnet to the allowed_ips list
 def add_ip(list_id, ip, comment):
     try:
@@ -62,10 +60,7 @@ def add_ip(list_id, ip, comment):
     "comment": comment
             }
         ]
-
-        #data = json.dumps(data)
         response = requests.request("POST", f'{base_url}/{list_id}/items', headers=headers, json=payload)
-
         if response.status_code == 200:
             print(f'Added {ip} to the {list_id} list')
         else:
@@ -92,6 +87,7 @@ parser.add_argument('--list', action='store_true', help='Lists the contents of t
 parser.add_argument('--add', type=str, nargs=2, metavar=("IP", "COMMENT"), help="Add an IP address or subnet to the rule")
 parser.add_argument('--delete', type=str, help='the IP or subnet to remove from the list')
 args = parser.parse_args()
+
 # Handle the command line arguments
 if args.list:
     get_list(list_id)
